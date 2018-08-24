@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		19043DF2212E0B8C006EE0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043DF1212E0B8C006EE0FE /* AppDelegate.swift */; };
-		19043DF4212E0B8C006EE0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043DF3212E0B8C006EE0FE /* ViewController.swift */; };
 		19043DF7212E0B8C006EE0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19043DF5212E0B8C006EE0FE /* Main.storyboard */; };
 		19043DF9212E0B8E006EE0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19043DF8212E0B8E006EE0FE /* Assets.xcassets */; };
 		19043DFC212E0B8E006EE0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19043DFA212E0B8E006EE0FE /* LaunchScreen.storyboard */; };
 		19043E07212E0B8E006EE0FE /* Journal3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043E06212E0B8E006EE0FE /* Journal3Tests.swift */; };
+		19043E17212E0FBF006EE0FE /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043E16212E0FBF006EE0FE /* EntryTableViewController.swift */; };
+		19043E19212E1006006EE0FE /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043E18212E1006006EE0FE /* EntryController.swift */; };
+		19043E1B212E1A56006EE0FE /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043E1A212E1A56006EE0FE /* Entry.swift */; };
+		19043E21212F7F45006EE0FE /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19043E20212F7F45006EE0FE /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,6 @@
 /* Begin PBXFileReference section */
 		19043DEE212E0B8C006EE0FE /* Journal3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19043DF1212E0B8C006EE0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19043DF3212E0B8C006EE0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19043DF6212E0B8C006EE0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19043DF8212E0B8E006EE0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19043DFB212E0B8E006EE0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		19043E02212E0B8E006EE0FE /* Journal3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Journal3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19043E06212E0B8E006EE0FE /* Journal3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal3Tests.swift; sourceTree = "<group>"; };
 		19043E08212E0B8E006EE0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19043E16212E0FBF006EE0FE /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		19043E18212E1006006EE0FE /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		19043E1A212E1A56006EE0FE /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		19043E20212F7F45006EE0FE /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +83,10 @@
 		19043DF0212E0B8C006EE0FE /* Journal3 */ = {
 			isa = PBXGroup;
 			children = (
+				19043E13212E0EE3006EE0FE /* UI */,
+				19043E12212E0ED5006EE0FE /* Controller */,
+				19043E11212E0ECB006EE0FE /* Model */,
 				19043DF1212E0B8C006EE0FE /* AppDelegate.swift */,
-				19043DF3212E0B8C006EE0FE /* ViewController.swift */,
-				19043DF5212E0B8C006EE0FE /* Main.storyboard */,
 				19043DF8212E0B8E006EE0FE /* Assets.xcassets */,
 				19043DFA212E0B8E006EE0FE /* LaunchScreen.storyboard */,
 				19043DFD212E0B8E006EE0FE /* Info.plist */,
@@ -94,6 +101,32 @@
 				19043E08212E0B8E006EE0FE /* Info.plist */,
 			);
 			path = Journal3Tests;
+			sourceTree = "<group>";
+		};
+		19043E11212E0ECB006EE0FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19043E1A212E1A56006EE0FE /* Entry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19043E12212E0ED5006EE0FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19043E16212E0FBF006EE0FE /* EntryTableViewController.swift */,
+				19043E18212E1006006EE0FE /* EntryController.swift */,
+				19043E20212F7F45006EE0FE /* EntryDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19043E13212E0EE3006EE0FE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				19043DF5212E0B8C006EE0FE /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19043DF4212E0B8C006EE0FE /* ViewController.swift in Sources */,
+				19043E1B212E1A56006EE0FE /* Entry.swift in Sources */,
+				19043E17212E0FBF006EE0FE /* EntryTableViewController.swift in Sources */,
+				19043E19212E1006006EE0FE /* EntryController.swift in Sources */,
+				19043E21212F7F45006EE0FE /* EntryDetailViewController.swift in Sources */,
 				19043DF2212E0B8C006EE0FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
